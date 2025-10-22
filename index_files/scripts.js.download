@@ -1,0 +1,64 @@
+var _____WB$wombat$assign$function_____ = function(name) {return (self._wb_wombat && self._wb_wombat.local_init && self._wb_wombat.local_init(name)) || self[name]; };
+if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; return this; } }
+{
+  let window = _____WB$wombat$assign$function_____("window");
+  let self = _____WB$wombat$assign$function_____("self");
+  let document = _____WB$wombat$assign$function_____("document");
+  let location = _____WB$wombat$assign$function_____("location");
+  let top = _____WB$wombat$assign$function_____("top");
+  let parent = _____WB$wombat$assign$function_____("parent");
+  let frames = _____WB$wombat$assign$function_____("frames");
+  let opener = _____WB$wombat$assign$function_____("opener");
+
+/*!
+* Start Bootstrap - Clean Blog v6.0.9 (https://startbootstrap.com/theme/clean-blog)
+* Copyright 2013-2023 Start Bootstrap
+* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-clean-blog/blob/master/LICENSE)
+*/
+window.addEventListener('DOMContentLoaded', () => {
+    let scrollPos = 0;
+    const mainNav = document.getElementById('mainNav');
+    const headerHeight = mainNav.clientHeight;
+    window.addEventListener('scroll', function() {
+        const currentTop = document.body.getBoundingClientRect().top * -1;
+        if ( currentTop < scrollPos) {
+            // Scrolling Up
+            if (currentTop > 0 && mainNav.classList.contains('is-fixed')) {
+                mainNav.classList.add('is-visible');
+            } else {
+                console.log(123);
+                mainNav.classList.remove('is-visible', 'is-fixed');
+            }
+        } else {
+            // Scrolling Down
+            mainNav.classList.remove(['is-visible']);
+            if (currentTop > headerHeight && !mainNav.classList.contains('is-fixed')) {
+                mainNav.classList.add('is-fixed');
+            }
+        }
+        scrollPos = currentTop;
+    });
+})
+
+
+}
+/*
+     FILE ARCHIVED ON 12:00:58 Oct 10, 2025 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 09:06:44 Oct 22, 2025.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 0.711
+  exclusion.robots: 0.025
+  exclusion.robots.policy: 0.011
+  esindex: 0.013
+  cdx.remote: 324.284
+  LoadShardBlock: 1760.065 (3)
+  PetaboxLoader3.resolve: 742.59 (4)
+  PetaboxLoader3.datanode: 1351.865 (4)
+  load_resource: 584.462
+*/
